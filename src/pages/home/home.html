@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div class="clock-box ">
+      <span class="clock-display">
+      <span class="clock">{{clockTime}}</span>
+      </span>
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-grid no-padding="">
+  <ion-row>
+    <ion-col>
+      <div class="hour-color-field" [style.background-color]="changeHourBackground()">
+        <h1>Stunden</h1><h2>{{hourColor}}</h2>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="minutes-color-field" [style.background-color]="changeMinutesBackground()">
+        <h1>Minuten</h1><h2>{{minutesColor}}</h2>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="seconds-color-field" [style.background-color]="changeSecondsBackground()">
+        <h1>Sekunden</h1><h2>{{secondsColor}}</h2>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-fab right bottom>
+  <button ion-fab mini color="light" (click)="changeMode()">
+  <ion-icon [name]="modeIcon"></ion-icon>
+  </button>
+</ion-fab>
+
